@@ -1,0 +1,13 @@
+{% macro render_status_badge(status) %}
+    <span class="badge {{ get_status_badge_class(status) }}">
+        {{ status.replace('_', ' ').title() }}
+    </span>
+{% endmacro %}
+
+{% macro render_priority_badge(priority) %}
+    <span class="badge {{ get_priority_badge_class(priority) }}">
+        {{ priority.title() }} Priority
+    </span>
+{% endmacro %}
+
+
